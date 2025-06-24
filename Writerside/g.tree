@@ -7,4 +7,8 @@
                  start-page="gnss-ir.md">
 
     <toc-element topic="gnss-ir.md"/>
+    <toc-element toc-title="Legal">
+        <toc-element topic="Terms-and-Conditions.md"/>
+        <toc-element topic="privacy-policy.md"/>
+    </toc-element>
 </instance-profile>
