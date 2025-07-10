@@ -4,11 +4,9 @@
 
 <instance-profile id="g"
                  name="GNSS-IR"
-                 start-page="gnss-ir.md">
+                 start-page="home.topic">
 
-    <toc-element topic="gnss-ir.md"/>
-    <toc-element toc-title="Legal">
-        <toc-element topic="Terms-and-Conditions.md"/>
-        <toc-element topic="privacy-policy.md"/>
-    </toc-element>
+    <toc-element topic="home.topic"/>
+    <toc-element topic="Build-Tutorial.md"/>
+    <toc-element topic="Parts-Lit.md"/>
 </instance-profile>

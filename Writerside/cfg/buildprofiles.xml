@@ -3,7 +3,13 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <variables></variables>
+    <variables>
+        <primary-color>forest</primary-color>
+        <color-preset>vivid</color-preset>
+        <download-title>GitHub</download-title>
+        <download-page>https://github.com/AjayACST/gnss-ir-nz</download-page>
+        <showDownloadButton>true</showDownloadButton>
+    </variables>
     <build-profile instance="g">
     </build-profile>
 

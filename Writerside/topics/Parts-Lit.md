@@ -1,3 +1,3 @@
-# About GNSS-IR
+# Parts List
 
 Start typing here...
