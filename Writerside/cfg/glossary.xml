@@ -4,4 +4,7 @@
     <term name="APN">
         Access Point Name
     </term>
+    <term name="NMEA">
+        National Marine Electronics Association, standard for communication between GPS devices
+    </term>
 </terms>

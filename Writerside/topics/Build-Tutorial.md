@@ -22,11 +22,27 @@ The parts list can <a href="Parts-Lit.md">be found here</a>.
 </chapter>
 
 <chapter title="1. Preparing Arduino" id="preparing-arduino" collapsible="true">
+
+This chapter will guide you through the process of setting up the Arduino MKR NB 1500, creating a Dropbox app, and 
+changing the GPS output rate.
+
+<procedure title="Table of Contents" id="section1-toc" collapsible="true">
+    <step><a href="#arduino-ide-setup">Arduino IDE Setup</a></step>
+    <step><a href="#format-sd-card">Format the SD Card</a></step>
+    <step><a href="#get-firmware">Get the Firmware</a></step>
+    <step><a href="#dropbox-key">Dropbox Key</a></step>
+    <step><a href="#change-gps-output-rate">Change GPS Output Rate</a></step>
+    <step><a href="#install-cellular-library">Install Cellular Library</a></step>
+    <step><a href="#upload-firmware">Uploading the Firmware</a></step>
+    <step><a href="#c-definitions">C++ Definitions</a></step>
+</procedure>
+
 You will need:
 <list>
     <li>Arduino MKR NB 1500</li>
     <li>SD Card</li>
 </list>
+
 
 <chapter title="1.1. Arduino IDE Setup" id="arduino-ide-setup">
 Start by downloading the Arduino IDE available <a href="https://www.arduino.cc/en/software">at the arduino website
@@ -108,5 +124,74 @@ formatting it.
 ![dropbox_credentials.png](dropbox_credentials.png)
 </chapter>
 
+<chapter title="1.5. Change GPS Output Rate" id="change-gps-output-rate">
+The GPS module will output data at a rate of 1Hz by default. This will create a massive amount of data that is not 
+needed for this project. Therefore, we will need to change this output rate to 0.2Hz (5 seconds). To do this you will need
+a Windows computer with the <a href="https://www.u-blox.com/en/product/u-center">u-center 2.0</a> software installed.
+
+Open u-Center connect the GPS module, if you are using the Sparkfun NEO-M9N from the parts list you can do this by
+plugging a USB-C cable into the GPS module and then into your computer. Then click the "devices" icon and then the plus
+button.
+
+![u-center-add.png](u-center-add.png)
+
+Then select the COM port that the GPS module is connected to and click "Connect". If everything is working correctly
+and you GPS module has a FIX on some satellites you should see a screen like this:
+
+![u-center-main.png](u-center-main.png)
+
+This screen shows all the parsed raw data that is collected from the GPS module. Now click the settings button beside the
+plus icon you used to add the module. In the window that opens click the button indicated below to load in the current module configuration,
+then search for "CFG-RATE" in the search bar.
+
+![u-center-search.png](u-center-search.png)
+
+Now click "CFG-RATE" in the list, this will bring up the settings panel on the side, under "Value (scaled) s" change the
+value to 5 then tick the boxes for "RAM", "BBR" and "Flash" to save the settings to the module's RAM, BBR and Flash memory.
+Then click the "Send" button to send the new settings to the module. If everything has updated you should see 3 green
+ticks beside the 3 rows in the table.
+
+![u-center-config-set.png](u-center-config-set.png)
+
+You can now close out of u-Center and unplug the GPS module.
+</chapter>
+
+<chapter title="1.6. Install Cellular Library" id="install-cellular-library">
+You will need to install one more library before uploading the firmware. To do this download this zip file of code: 
+<a href="https://github.com/techstudio-design/SimpleNB/archive/refs/heads/master.zip"> GitHub - SimpleNB</a>.
+In your Arduino IDE click the "Sketch" menu and then "Include Library" -> "Add .ZIP Library...". Select the zip file you
+just downloaded. Once you have the library installed check that the code compiles by clicking the checkmark icon in the
+top left. If it compiles without any errors you are ready to upload the code to the Arduino.
+</chapter>
+
+<chapter title="1.7. Upload the Firmware" id="upload-firmware">
+Now plug the Arduino into your computer and select the board from the board selector beside the upload button. It should
+be indicated as "Arduino MKR NB 1500". Then click the upload button (the right arrow icon) to upload the code to the Arduino.
+</chapter>
+
+<chapter title="1.8. C++ Definitions" id="c-definitions">
+At the top of the file below the #include directives you will see some definitions that you can change if you have 
+different configs
+<list>
+<li><code>#define GPS_BAUD 38400</code> 
+- default baud rate for the u-Blox NEO-M9N GPS module, only change if using a different module</li>
+<li><code>#define SERIAL_BAUD 9600</code> - 
+baud rate for the serial monitor, only change if you want to change the speed of the serial monitor.</li>
+<li><code>#define IDLE_THRESHOLD 10</code> - 
+threshold for no output from the GPS module to be considered "idle". In milliseconds.</li>
+<li><code>#define SDCard 4</code> - 
+SD card chip select PIN, only change if not using the MKR SD Shield.</li>
+<li><code>#define WAIT_FOR_VALID_GPS</code> - 
+comment out if you want to start recording data immediately, even if the GPS module is not ready.</li>
+<li><code>#define MAX_BASENAME_LEN (8+1)</code> - 
+maximum length of the basename of the log files.</li>
+<li><code>#define MAX_FILENAME_LEN (MAX_BASENAME_LEN + 1 +3)</code> - 
+maximum length of the log file name including extension</li>
+<li><code>#define DEBUG</code> - 
+comment out if you want to disable debug messages, recommend to comment out when confirmed working.</li>
+<li><code>#define GPS_BUFFER_SIZE_TYPICAL 512</code> - 
+typical size of the GPS <tooltip term="NMEA">NMEA</tooltip>, used for buffer pre-allocation</li>
+</list>
+</chapter>
 
 </chapter>
