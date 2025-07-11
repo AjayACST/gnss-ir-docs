@@ -193,5 +193,71 @@ comment out if you want to disable debug messages, recommend to comment out when
 typical size of the GPS <tooltip term="NMEA">NMEA</tooltip>, used for buffer pre-allocation</li>
 </list>
 </chapter>
+</chapter>
 
+[//]: # (Chapter 2 connecting electronics)
+
+<chapter title="2. Connecting the Electronics" id="connecting-electronics" collapsible="true">
+
+<chapter title="2.1. Connecting the Arduino and SD Shield" id="arduino-sd-shield">
+You will need
+<list type="decimal">
+<li>Arduino MKR NB 1500</li>
+<li>Arduino MKR SD Shield</li>
+<li>Micro SD Card</li>
+</list>
+
+Start by plugging the SD Shield into the Arduino. To do this simply line the pins up on the SD shield to the pins on the
+NB 1500 and push them together. The labels should line up between the two boards, e.g. 5V to 5V. As a general guide the SD
+card slot should face away from the Micro USB port on the arduino. If you have your SD card formatted and dropbox
+credentials loaded then now is the time to insert the SD card into the slot.
+
+![arduino-stack.jpeg](arduino-stack.jpeg)
+</chapter>
+
+<chapter title="2.2. Connecting the Arduino and GPS Module" id="arduino-gps-module">
+You will need
+<list type="decimal">
+<li>Sparkfun NEO-M9N</li>
+<li>Header Pins</li>
+<li>Breadboard</li>
+<li>Arduino MKR NB 1500</li>
+<li>Jumper Wires</li>
+<li>GNSS Antenna</li>
+</list>
+
+To connect the GPS module to the Arduino you will first need to solder the header pins to the GPS module. To do this cut
+the header pins to the correct length and solder them to the GPS module. The pins should be soldered to the empty row that
+is on the USB port side of the PCB. Then put the header pins into the breadboard so that the longer side of the pings goes
+into the breadboard, then place the GPS module on top of the header pins and solder to the board.
+
+![solder-neo-m9n.jpeg](solder-neo-m9n.jpeg)
+
+Once it has been soldered you can plug the GPS module and Arduino into the breadboard. Place the Arduino at one end of
+the breadboard and the GPS module at the other end.
+
+| ![gps-placement-bad.jpeg](gps-placement-bad.jpeg)     | ![gps-placement-good.jpeg](gps-placement-good.jpeg)    |
+|-------------------------------------------------------|--------------------------------------------------------|
+| Example of bad placement of the board and GPS Module. | Example of good placement of the board and GPS module. |
+
+<warning>
+    Placing the Arduino and GPS module so that some of the pins are on the same track can fry your board or pins.
+</warning>
+
+You can now connect the two using jumper wires and the following connection list
+<list>
+    <li>GPS Module VCC -> Arduino 3.3V</li>
+    <li>GPS Module GND -> Arduino GND</li>
+    <li>GPS Module RX  -> Arduino TX</li>
+    <li>GPS Module TX  -> Arduino RX</li>
+</list>
+</chapter>
+
+<chapter title="2.3. Cellular Connection" id="cell-connection">
+    <note>
+        Add in info about how to get SIM card.
+    </note>
+    
+
+</chapter>
 </chapter>
