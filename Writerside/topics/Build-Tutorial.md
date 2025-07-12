@@ -199,6 +199,17 @@ typical size of the GPS <tooltip term="NMEA">NMEA</tooltip>, used for buffer pre
 
 <chapter title="2. Connecting the Electronics" id="connecting-electronics" collapsible="true">
 
+In this chapter we will guide you through the process of connecting the Arduino, SD Shield and GPS Module together. As
+well as how to set up the cellular connection and the power system.
+
+<procedure title="Table of Contents" id="section2-toc" collapsible="true">
+    <step><a href="#arduino-sd-shield">Connecting the Arduino and SD Shield</a></step>
+    <step><a href="#arduino-gps-module">Connecting the Arduino and GPS Module</a></step>
+    <step><a href="#cell-connection">Cellular Connection</a></step>
+    <step><a href="#power-system">Preparing the Power System</a></step>
+</procedure>
+
+
 <chapter title="2.1. Connecting the Arduino and SD Shield" id="arduino-sd-shield">
 You will need
 <list type="decimal">
@@ -258,6 +269,22 @@ You can now connect the two using jumper wires and the following connection list
         Add in info about how to get SIM card.
     </note>
     
+To start break the first layer off the SIM card so that you are left with the second-biggest size, the Micro Size.
+Then insert the sim card into the SIM slot on the back of the Arduino. The SIM slot is on the back of the board at the
+opposite end to the Micro USB port. The sim card should be inserted with the gold contacts facing up.
 
+Then plug the Laird antenna into the U.FL connector on the Arduino. This is the small circle connector on the front of
+the board, above the SIM card slot. THis connector can be a bit tricky to plug in, so be careful when plugging it in. It
+can also come out easily so we would recommend using a small amount of hot glue or tape to hold it in place once you have
+confirmed that everything is working.
+    <note>
+        Add in photo of the complete board
+    </note>
+</chapter>
+
+<chapter title="2.4. Preparing the Power System" id="power-system">
+    <note>
+        Euan to write or give information to write this up.
+    </note>
 </chapter>
 </chapter>
