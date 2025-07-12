@@ -282,9 +282,69 @@ confirmed that everything is working.
     </note>
 </chapter>
 
+
 <chapter title="2.4. Preparing the Power System" id="power-system">
     <note>
         Euan to write or give information to write this up.
     </note>
+</chapter>
+</chapter>
+
+<chapter title="3. Mounting the System" id="mounting-system" collapsible="true">
+    <note>
+        Need to finalise this section and what we are doing with it
+    </note>
+</chapter>
+
+<chapter title="4. Testing the System" id="testing-system" collapsible="true">
+<chapter title="4.1. Activity LEDs" id="activity-led">
+There is a green LED on the Arduino that will flash every 5 seconds to indicate when data is being written to the SD card.
+There is also a red LED on the GPS module, this should be constantly on when the GPS module is powered on to indicate power,
+it also has a blue LED that will flash when the GPS module has a fix on the satellites. This can take a few minutes, and
+may not work if the GPS module is indoors or in a place with poor satellite visibility.
+
+The green LED on the Arduino will also turn solid to indicate when it is uploading a file to Dropbox. This will happen
+when the GPS module gets a fix on the satellites and every hour after that.
+
+<note>Add photo highlighting these LEDs</note>
+</chapter>
+
+<chapter title="4.2. Serial Monitor" id="serial-monitor">
+You can also check that the NMEA sentences look correct and are being received by the Arduino by opening the serial monitor.
+To do this follow the steps for plugging the Arduino into the computer from <a href="#upload-firmware"> 1.7. Uploading the Firmware</a>.
+Then click the magnifying glass icon in the top right of the Arduino IDE to open the serial monitor, the baud rate should
+be set to 9600. You should see the NMEA sentences being printed to the serial monitor every 5 seconds.
+
+If you have the <code>#define DEBUG</code> enabled in the <code>main.cpp</code> file you will also see debug messages
+such as the GPS timestamp, file name and data messages from Dropbox.
+</chapter>
+
+<chapter title="4.3. Data Files" id="data-files">
+The files that are saved to the SD card will have an .LOG extension. The file names will look like the files below
+
+![log-file-example.png](log-file-example.png)
+
+Where the first two digits are the year, the second two digits are the month, and the last two digits are the day.
+This date is in UTC.
+
+The data in the file should look like the below example.
+
+<code-block lang="plain text">
+$GNGGA,000058.000,4443.0116,S,16910.7098,E,2,16,0.66,345.6,M,6.1,M,,*5D
+$GPGSV,3,1,12,03,62,297,47,26,59,075,49,31,58,126,48,04,52,236,46*77
+$GPGSV,3,2,12,16,40,018,44,28,25,119,43,50,23,307,39,09,14,243,40*75
+$GPGSV,3,3,12,06,09,222,45,29,06,131,39,195,06,330,32,194,,,25*43
+$GLGSV,2,1,08,80,80,003,42,70,71,203,30,79,39,142,44,69,37,054,44*61
+$GLGSV,2,2,08,73,24,330,37,71,20,221,35,87,08,198,24,86,04,244,28*6B
+$GNRMC,000058.000,A,4443.0116,S,16910.7098,E,0.01,0.00,310524,,,D*6D
+
+$GNGGA,000108.000,4443.0116,S,16910.7098,E,2,16,0.66,345.6,M,6.1,M,,*59
+$GPGSV,3,1,12,03,61,298,46,26,59,075,49,31,58,126,48,04,52,236,47*7B
+$GPGSV,3,2,12,16,40,018,44,28,25,119,44,50,23,307,40,09,14,243,39*72
+$GPGSV,3,3,12,06,09,222,47,29,06,131,39,195,06,330,38,194,,,*4C
+$GLGSV,2,1,08,80,80,003,43,70,71,203,30,79,39,142,45,69,37,054,44*61
+$GLGSV,2,2,08,73,24,330,37,71,20,221,36,87,08,198,24,86,04,244,26*66
+$GNRMC,000108.000,A,4443.0116,S,16910.7098,E,0.02,0.00,310524,,,D*6A
+</code-block>
 </chapter>
 </chapter>
