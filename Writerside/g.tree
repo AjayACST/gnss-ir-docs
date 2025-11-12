@@ -7,6 +7,6 @@
                  start-page="home.topic">
 
     <toc-element topic="home.topic"/>
-    <toc-element topic="Build-Tutorial.md"/>
     <toc-element topic="Parts-Lit.md"/>
+    <toc-element topic="Build-Tutorial.md"/>
 </instance-profile>
