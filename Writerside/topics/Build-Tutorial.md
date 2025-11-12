@@ -300,6 +300,14 @@ the load terminals are to the right of the battery terminals.
 </chapter>
 
 <chapter title="4. Mounting the System" id="mounting-system" collapsible="true">
+In this chapter we will guide you through the process of creating the electronics enclosure, mounting the solar panels
+and antenna mast.
+
+<procedure title="Table of Contents" id="section4-toc" collapsible="true">
+    <step><a href="#prepare-enclosure">Prepare the Enclosure</a></step>
+    <step><a href="#solar-panel-mounting">Solar Panel Mounting</a></step>
+    <step><a href="#mount-gnss-antenna">Mount the GNSS Antenna</a></step>
+</procedure>
 <chapter title="4.1. Prepare the Enclosure" id="prepare-enclosure">
     You will need
     <list>
@@ -307,7 +315,6 @@ the load terminals are to the right of the battery terminals.
         <li>Waterproof Enclosure</li>
         <li>Drill</li>
         <li>Drill Bits</li>
-        <li>Screwdriver</li>
         <li>Grommets</li>
     </list>
 First of all drill two holes through the side of the box for the power cable and the GNSS antenna cable. If using the
@@ -317,16 +324,23 @@ Velcro strips. Connect the power cable to the arduino board and the GNSS antenna
 the lid onto the enclosure. Ensure when before you close the lid that the rubber seal on the clear lid is seated properly
 so that the enclosure is waterproof.
 
-The best place for the electronics box to be stored is alongside the power system enclosure so that the cables can reach 
-and reduce the amount of points that water can enter.
+Now we need to prepare the power system enclosure. We used a small chilly bin as it is waterproof, insulated and easy to
+carry. Ensure it is big enough for the two batteries, and arduino enclosure.
+You will need to drill a hole for the solar panel wire and GNSS antenna cable to go through, again using a grommet to
+ensure it is waterproof. Finally put the prepared solar/battery system and arduino enclosure into the chilly bin,
+connect the power cable to the arduino, run the GNSS antenna cable out through the grommet on the side of the chilly bin
+and close the lid. We recommend to wrap everything in a warm blanket to help insulate the batteries and keep them warm.
+
 </chapter>
 <chapter title="4.2. Solar Panel Mounting" id="solar-panel-mounting">
     You will need
     <list>
         <li>Solar Panel</li>
+        <li>Hinges</li>
         <li>Screws</li>
         <li>Drill</li>
-        <li>6x pieces of wood</li>
+        <li>6x 2x4 timber</li>
+        <li>4x4 timber</li>
     </list>
 To mount the solar panel you will need to create a stand for them to go on. For our Deployment we created an A-frame style
 stand using 6 pieces of 2x4 timber and one 4x4. We used the 4x4 as the connector between the two legs at the top,
@@ -339,7 +353,7 @@ stand. We also made the front legs of the stand shorter than the back legs to gi
 The fusion 360 file for this can be found here: <a href="https://a360.co/4hYwEia"/>
 </note>
 </chapter>
-<chapter title="4.2. Mount the GNSS Antenna" id="mount-gnss-antenna">
+<chapter title="4.3. Mount the GNSS Antenna" id="mount-gnss-antenna">
     You will need
     <list>
         <li>GNSS Antenna with Cable</li>
@@ -356,14 +370,19 @@ that the mast does not sway in the wind. The easiest way to do this is use some 
 </chapter>
 
 <chapter title="5. Testing the System" id="testing-system" collapsible="true">
+In this section we show you what the activity LEDs should look like, how to check the serial monitor, and what the data files
+look like.
+
+<procedure title="Table of Contents" id="section6-toc" collapsible="true">
+    <step><a href="#activity-led">Activity LEDs</a></step>
+    <step><a href="#serial-monitor">Serial Monitor</a></step>
+    <step><a href="#data-files">Data Files</a></step>
+</procedure>
 <chapter title="5.1. Activity LEDs" id="activity-led">
 There is a green LED on the Arduino that will flash every 5 seconds to indicate when data is being written to the SD card.
 There is also a red LED on the GPS module, this should be constantly on when the GPS module is powered on to indicate power,
 it also has a blue LED that will flash when the GPS module has a fix on the satellites. This can take a few minutes, and
 may not work if the GPS module is indoors or in a place with poor satellite visibility.
-
-
-<note>Add photo highlighting these LEDs</note>
 </chapter>
 
 <chapter title="5.2. Serial Monitor" id="serial-monitor">
