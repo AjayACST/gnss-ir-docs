@@ -11,6 +11,9 @@
         <showDownloadButton>true</showDownloadButton>
     </variables>
     <build-profile instance="g">
+        <variables>
+            <noindex-content>true</noindex-content>
+        </variables>
     </build-profile>
 
 </buildprofiles>

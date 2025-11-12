@@ -76,6 +76,9 @@ jobs:
       - name: Unzip artifact
         run: unzip -O UTF-8 -qq "artifacts/${{ needs.build.outputs.artifact }}" -d dir
 
+      - name: Cleanup Artifacts
+        run: rm -rf artifacts
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
