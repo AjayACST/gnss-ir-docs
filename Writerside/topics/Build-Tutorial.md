@@ -18,7 +18,7 @@ This project was developed by the following contributors:
 </chapter>
 
 <chapter title="Parts" id="parts">
-The parts list can <a href="Parts-Lit.md">be found here</a>.
+The parts list can <a href="Parts-List.md">be found here</a>.
 </chapter>
 
 <chapter title="1. Preparing Arduino" id="preparing-arduino" collapsible="true">
@@ -257,11 +257,8 @@ Use the stainless steel bolts to connect the wires to the battery terminals secu
 
 <img src="battery-parallel.jpeg" alt="Photo showing the two batteries connected in parallel."/>
 
-Now we need to connect an inline fuse to the positive wire going to the solar charge controller from the battery. Just
-use a terminal screw block to connect the inline fuse to the positive wire.
-
 Next connect the battery's to the charge controller. In the case of the charge controller in the parts list you just need
-to connect the output of the inline fuse to the positive battery terminal on the charge controller, and the negative
+to connect the positive terminal of the battery to the positive battery terminal on the charge controller, and the negative
 terminal of the battery system to the negative battery terminal on the charge controller. Use the terminal screw blocks
 to connect them.
 
@@ -367,7 +364,7 @@ The fusion 360 file for this can be found here: <a href="https://a360.co/4hYwEia
         <li>Antenna Mast Mount (Optional)</li>
     </list>
 Once again this is upto your deployment for the best way of doing this. For our deployment we had some students build a 
-custom mast stand out of metal. However, you can also buy one online. We have one linked in our <a href="Parts-Lit.md">parts list</a>.
+custom mast stand out of metal. However, you can also buy one online. We have one linked in our <a href="Parts-List.md">parts list</a>.
 
 Once you have the mast you will need to mount the antenna to the top of the mast. We did this using zip ties and duct tape.
 If your mast has guide wires make sure to install these before mounting the antenna. Ensure they are tight and secure so

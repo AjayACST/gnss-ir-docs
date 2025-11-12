@@ -1,3 +1,0 @@
-# Parts List
-
-Start typing here...
