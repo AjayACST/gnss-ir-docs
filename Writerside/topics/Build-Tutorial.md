@@ -245,21 +245,27 @@ You will need
     <li>2x 12V batteries</li>
     <li>Multimeter</li>
     <li>12AWG wire</li>
+    <li>4x stainless steel bolts</li>
 </list>
-We need to connect the batteries in parallel to increase the capacity of the battery system. To do this 
-<warning>
-Pls finish this when screwdriver gets here
-</warning>
-<warning>
-Bit about fuse goes here
-</warning>
+We need to connect the batteries in parallel to increase the capacity of the battery system. To do this connect the positive
+terminal of one battery to the positive terminal of the other battery using a length of 12AWG wire.
+Then do the same for the negative terminals. The best way to do this is to cut a length of wire that will reach between 
+the two batteries and to the solar charge controller. Then strip the wire and connect to the first battery terminal, then
+run the wire through the hole on the second battery terminal and strip the insulation where the wire meets the terminal.
+Then run the rest of the wire to the solar charge controller.
+Use the stainless steel bolts to connect the wires to the battery terminals securely.
+
+<img src="battery-parallel.jpeg" alt="Photo showing the two batteries connected in parallel."/>
+
+Now we need to connect an inline fuse to the positive wire going to the solar charge controller from the battery. Just
+use a terminal screw block to connect the inline fuse to the positive wire.
 
 Next connect the battery's to the charge controller. In the case of the charge controller in the parts list you just need
-to connect the positive terminal of the battery system to the positive battery terminal on the charge controller, and the negative
+to connect the output of the inline fuse to the positive battery terminal on the charge controller, and the negative
 terminal of the battery system to the negative battery terminal on the charge controller. Use the terminal screw blocks
 to connect them.
 
-<img src="battery-connection-solar.png" alt="Photo showing the connection between the battery and solar controller."/>
+<img src="solar-fuse-battery.jpeg" alt="Photo showing the connection between the battery system, solar controller and inline fuse."/>
 
 Now we can connect the solar panels to the charge controller. First use a multimeter to find out which wire is positive
 and negative. You will need to set the multimeter to read DC voltage, then place the red probe on one wire and the black probe on the other.
