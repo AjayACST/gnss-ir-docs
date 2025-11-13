@@ -200,12 +200,12 @@ The lists below have everything that you will need to build this project. Links 
         <td>$1.15 per meter</td>
         <td><a href="https://www.jaycar.co.nz/10a-heavy-duty-hook-up-wire-blue/p/WH3052"/></td>
     </tr><tr>
-        <td>87649</td>
-        <td>6 Pack M8 x 20mm Stainless Steel bolt and nut</td>
+        <td>200339</td>
+        <td>4 Pack 3/16" x 25mm Stainless Steel bolt and nut</td>
         <td>1</td>
         <td>1</td>
-        <td>$11.65</td>
-        <td><a href="https://www.bunnings.co.nz/pinnacle-m8-x-20mm-stainless-steel-hex-head-bolts-and-nuts-6-pack_p0087649"/></td>
+        <td>$8.68</td>
+        <td><a href="https://www.mitre10.co.nz/shop/zenith-round-head-bolt-nut-3/16-inch-x-25mm-stainless-steel/p/200339"/></td>
     </tr><tr>
         <td>MP3750</td>
         <td>10A Solar Charger Controller</td>
