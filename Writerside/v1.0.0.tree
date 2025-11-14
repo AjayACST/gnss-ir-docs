@@ -2,7 +2,7 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="g"
+<instance-profile id="v1.0.0"
                  name="GNSS-IR"
                  start-page="home.topic">
 

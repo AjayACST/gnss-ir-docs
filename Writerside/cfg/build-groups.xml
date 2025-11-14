@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE build-groups SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-groups.dtd">
+<build-groups xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-groups.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <build-group name="gnss-ir-version-docs">
+        <instance instance-id="v1.0.0" alias="Version 1" path="/v1.0.0"/>
+    </build-group>
+</build-groups>

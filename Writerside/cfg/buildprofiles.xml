@@ -10,9 +10,9 @@
         <download-page>https://github.com/AjayACST/gnss-ir-nz</download-page>
         <showDownloadButton>true</showDownloadButton>
     </variables>
-    <build-profile instance="g">
+    <build-profile instance="v1.0.0">
         <variables>
-            <noindex-content>true</noindex-content>
+            <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
 
