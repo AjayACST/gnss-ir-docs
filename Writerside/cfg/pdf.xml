@@ -1,0 +1,11 @@
+<pdf>
+    <cover-page>
+        <title>IEEE GNSS-IR Physics Project 2025</title>
+        <description>Build tutorial and parts list.
+            Online version of this documentation is available at: https://ajayacst.github.io/gnss-ir-docs
+            Source code is available online at: https://github.com/AjayACST/gnss-ir-nz
+        </description>
+        <copyright>Licensed under the GNU General Public License v3.0</copyright>
+    </cover-page>
+    <footer>v1.0.0</footer>
+</pdf>
