@@ -2,11 +2,11 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="v1.0.0"
+<instance-profile id="v1.1.0"
                  name="GNSS-IR"
-                 start-page="home.topic">
+                 start-page="home-v1.1.topic">
 
-    <toc-element topic="home.topic"/>
-    <toc-element topic="Parts-List.md"/>
+    <toc-element topic="home-v1.1.topic"/>
+    <toc-element topic="Parts-List-v1.1.md"/>
     <toc-element topic="Build-Tutorial-v1.1.md"/>
 </instance-profile>
