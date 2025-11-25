@@ -12,11 +12,13 @@
     </variables>
     <build-profile instance="v1.0.0">
         <variables>
+            <versions-switcher>https://ajayacst.github.io/gnss-ir-docs/versions.json</versions-switcher>
             <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
     <build-profile instance="v1.1.0">
         <variables>
+            <versions-switcher>https://ajayacst.github.io/gnss-ir-docs/versions.json</versions-switcher>
             <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
