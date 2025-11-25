@@ -51,7 +51,7 @@ jobs:
 
       - name: Add versions.json file
         run: |
-          zip -u artifacts/${{ steps.define-ids.outputs.artifact }} versions.json
+          sudo zip -u /github/workspace/artifacts/${{ steps.define-ids.outputs.artifact }} versions.json
 
       - name: Save artifact with build results
         uses: actions/upload-artifact@v5
