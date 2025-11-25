@@ -9,6 +9,7 @@
         <download-title>GitHub</download-title>
         <download-page>https://github.com/AjayACST/gnss-ir-nz</download-page>
         <showDownloadButton>true</showDownloadButton>
+        <web-root>https://ajayacst.github.io/gnss-ir-docs</web-root>
     </variables>
     <build-profile instance="v1.0.0">
         <variables>

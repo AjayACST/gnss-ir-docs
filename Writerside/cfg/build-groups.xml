@@ -3,7 +3,7 @@
 <build-groups xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-groups.xsd"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <build-group name="gnss-ir-version-docs">
-        <instance instance-id="v1.0.0" alias="v1.0.0" path="/v1.0.0"/>
         <instance instance-id="v1.1.0" alias="v1.1.0" path="/v1.1.0"/>
+        <instance instance-id="v1.0.0" alias="v1.0.0" path="/v1.0.0"/>
     </build-group>
 </build-groups>
