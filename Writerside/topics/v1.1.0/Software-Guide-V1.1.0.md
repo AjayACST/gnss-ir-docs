@@ -55,6 +55,9 @@ Once you have modified the script to your liking, run the script with python:
 ```bash
 python matlab_translate.py
 ```
+The script will then ask you if you would like to use the default azimuth range bins of 0-90, 90-180, 180-270, 270-360 degrees.
+You can choose to use these default bins, or specify your own custom azimuth bins, of which you can have up to 4 bins.
+
 This will process all matching files in the specified directory. Once it has finished doing this it will prompt you for 
 what type of graphs to output. See below for more information on the graph options.
 
