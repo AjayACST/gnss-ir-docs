@@ -18,6 +18,25 @@ The required dependencies are:
 - matplotlib
 - scipy
 
+
+## Configuration
+
+There are some configuration options that can be set in the `config.ini` file. The options are as follows:
+- `pvf`: Polynomial order to use for filtering direct signal SNR data.
+- `min_rh`: Minimum reflector height to consider for height retrievals (in meters).
+- `min_points`: Minimum number of data points required after filtering by azimuth and elevation to perform height retrieval.
+- `max_az_diff`: Maximum azimuth difference (in degrees) between the minimum and maximum to consider.
+- `max_height`: Maximum reflector height to consider for height retrievals (in meters).
+- `desired_precision`: Desired precision for use in the get_ofac_hifac function.
+- `pcrit`: Minimum value for the peak-noise ratio to consider a valid height retrieval.
+- `emin`: Minimum elevation angle (in degrees) to consider for height retrievals.
+- `emax`: Maximum elevation angle (in degrees) to consider for height retrievals.
+- `ediff`: Elevation difference (in degrees) between the minimum and maximum to consider.
+- `cf`: L1 GPS carrier frequency (in Hz).
+- `snr_thresh`: Minimum SNR value to consider for height retrievals.
+- `sampling_interval`: How many seconds between each SNR data point.
+- `av_time`: Average sampling time, used for smoothing function
+
 ## Usage
 To use the data processing package, run the script `matlab_translate.py`. By default the script is setup to process all data
 in the `data/farm` directory. You can change this by modifying the string on line 9
