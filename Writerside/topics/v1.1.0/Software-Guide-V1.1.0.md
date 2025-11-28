@@ -14,7 +14,6 @@ pip install -r requirements.txt
 ```
 The required dependencies are:
 - numpy
-- pandas
 - matplotlib
 - scipy
 
@@ -27,38 +26,32 @@ There are some configuration options that can be set in the `config.ini` file. T
 - `min_points`: Minimum number of data points required after filtering by azimuth and elevation to perform height retrieval.
 - `max_az_diff`: Maximum azimuth difference (in degrees) between the minimum and maximum to consider.
 - `max_height`: Maximum reflector height to consider for height retrievals (in meters).
-- `desired_precision`: Desired precision for use in the get_ofac_hifac function.
 - `pcrit`: Minimum value for the peak-noise ratio to consider a valid height retrieval.
-- `emin`: Minimum elevation angle (in degrees) to consider for height retrievals.
-- `emax`: Maximum elevation angle (in degrees) to consider for height retrievals.
 - `ediff`: Elevation difference (in degrees) between the minimum and maximum to consider.
-- `cf`: L1 GPS carrier frequency (in Hz).
 - `snr_thresh`: Minimum SNR value to consider for height retrievals.
-- `sampling_interval`: How many seconds between each SNR data point.
 - `av_time`: Average sampling time, used for smoothing function
 
 ## Usage
 To use the data processing package, run the script `matlab_translate.py`. By default the script is setup to process all data
-in the `data/farm` directory. You can change this by modifying the string on line 9
+in the `sample_data` directory. You can change this by modifying the string on line 9
 ```python
-data_path = Path("../sample_data/farm") # change this to your data directory
+data_path = Path("../sample_data") # change this to your data directory
 ```
-You can also change the what files are processed by modifying the input string on line 10:
-```python
-files_path = data_path.rglob("250520*.LOG") # change this to your file pattern
-```
-In this example, only files that start with `250520` and end with `.LOG` will be processed. So this will match
-files generate on the 20th of May 2025. See [Build Tutorial Data Files](Build-Tutorial-v1.1.md#data-files) for more
-information on the file naming convention.
 
 Once you have modified the script to your liking, run the script with python:
 ```bash
 python matlab_translate.py
 ```
+Once started the script will first ask what files you would like to process. To match multiple files use an * as a wildcard.
+For example `250520*.LOG` will match only the files that start with `250520` and end with `.LOG` will be processed. So this will match
+files generated on the 20th of May 2025. See [Build Tutorial Data Files](Build-Tutorial-v1.1.md#data-files) for more
+information on the file naming convention.
+
 The script will then ask you if you would like to use the default azimuth range bins of 0-90, 90-180, 180-270, 270-360 degrees.
 You can choose to use these default bins, or specify your own custom azimuth bins, of which you can have up to 4 bins.
+After the Azimuths it will then ask for the minimum and maximum elevation angles to consider for height retrievals.
 
-This will process all matching files in the specified directory. Once it has finished doing this it will prompt you for 
+Fianlly, the script will start processing all matching files in the specified directory. Once it has finished doing this it will prompt you for 
 what type of graphs to output. See below for more information on the graph options.
 
 ## Graph Options
@@ -78,9 +71,12 @@ degrees, the top right 90-180 degrees and so on. This graph is from our sample d
 ### Retrieval Metrics for a Single Day
 ![plot-2-retrieval-metrics.png](plot-2-retrieval-metrics.png)
 This graph shows the retrieval metrics for a single day. The top graph shows the reflector height by the azimuth degree,
-and the bottom graph shows the peak amplitude by azimuth degree. This graph is from our sample data from the 22nd of May 2025.
+the middle graph shows the peak amplitude by azimuth degree, and the bottom graph shows the peak to noise ratio. This graph is from our sample data from the 22nd of May 2025.
 
+### Azimuth vs Elevation Polar Plot
+![plot-3-polar-plot.png](plot-3-polar-plot.png)
+This graph shows a polar plot of azimuth vs elevation for all height retrievals on a single day. This graph is from our sample data from the 22nd of May 2025.
 ### Height Retrievals Over Time
-![plot-3-height-retrievals-over-time.png](plot-3-height-retrievals-over-time.png)
+![plot-4-height-retrievals-over-time](plot-4-height-retrievals-over-time.png)
 This graph shows the height retrievals by day for all days processed. Each white dot represents a height retrieval, and
 the blue dot represents the average height retrieval for that day. This graph is from our sample data from the 20th to the 25th of May 2025.
