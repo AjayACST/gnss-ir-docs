@@ -66,8 +66,9 @@ are using macOS) so that the Arduino can read it.
 
 <chapter title="1.3. Get the firmware" id="get-firmware">
 Now that we have the board group and library installed we can upload the firmware to the Arduino. To do this create a
-new sketch and copy the code found in the <code>main.cpp</code> file here into the sketch. You will also need to copy
-or download the files <code>main.h</code> and <code>arduino_secrets.h.example</code> 
+new sketch and copy the code found in the <code>main.cpp</code> <a href="https://raw.githubusercontent.com/AjayACST/gnss-ir-nz/refs/heads/main/arduino-code/src/main.cpp">download here</a>
+file here into the sketch. You will also need to copy or download the files <code>main.h</code> <a href="https://raw.githubusercontent.com/AjayACST/gnss-ir-nz/refs/heads/main/arduino-code/src/main.h">download here</a>
+and <code>arduino_secrets.h.example</code> <a href="https://raw.githubusercontent.com/AjayACST/gnss-ir-nz/refs/heads/main/arduino-code/src/arduino_secrets.h.example">download here</a>
 (see note below) into their own files as well. You can do this by copying the file in GitHub, then click the three dots
 near the top right of the Arduino IDE and select "New File". Name the file the same as the one you copied. Do this for
 all three files.
