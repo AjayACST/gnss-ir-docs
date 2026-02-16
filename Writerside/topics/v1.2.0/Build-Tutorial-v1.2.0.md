@@ -203,7 +203,7 @@ the breadboard and the GPS module at the other end.
 
 You can now connect the two using jumper wires and the following connection list
 <list>
-    <li>GPS Module VCC -> Arduino 3.3V</li>
+    <li>GPS Module 3.3V -> Arduino VCC</li>
     <li>GPS Module GND -> Arduino GND</li>
     <li>GPS Module RX  -> Arduino TX</li>
     <li>GPS Module TX  -> Arduino RX</li>
