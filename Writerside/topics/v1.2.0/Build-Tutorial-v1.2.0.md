@@ -181,6 +181,8 @@ You will need
 <li>Arduino MKR NB 1500</li>
 <li>Jumper Wires</li>
 <li>GNSS Antenna</li>
+<li>Solder</li>
+<li>Soldering Iron</li>
 </list>
 
 To connect the GPS module to the Arduino you will first need to solder the header pins to the GPS module. To do this cut
@@ -287,7 +289,7 @@ You will need
 <list>
     <li>Micro USB Cable</li>
     <li>Wire Strippers</li>
-    <li>Screw Driver</li>
+    <li>Screwdriver</li>
     <li>Prepared solar/battery system</li>
     <li>Screw Terminal Blocks</li>
     <li>Multi-voltage Adaptor</li>
