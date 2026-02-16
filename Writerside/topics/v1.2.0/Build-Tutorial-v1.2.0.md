@@ -248,6 +248,12 @@ You will need
     <li>12AWG wire</li>
     <li>4x stainless steel bolts</li>
 </list>
+<warning>
+Before connecting the batteries to the solar charger, ensure they are at least 50% charged. The table below shows the 
+estimated battery level based on the voltage level across the terminals.
+<img src="battery-voltage-level.png" alt="Photo showing the voltage level to battery level"/>
+</warning>
+
 We need to connect the batteries in parallel to increase the capacity of the battery system. To do this connect the positive
 terminal of one battery to the positive terminal of the other battery using a length of 12AWG wire.
 Then do the same for the negative terminals. The best way to do this is to cut a length of wire that will reach between 
