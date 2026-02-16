@@ -5,8 +5,8 @@
 <instance-profile id="v1.2.0"
                  name="GNSS-IR"
                  start-page="GNSS-IR-V1.2.0.md">
-    <toc-element topic="Build-Tutorial-v1.2.0.md"/>
     <toc-element topic="GNSS-IR-V1.2.0.md"/>
     <toc-element topic="Parts-List-v1.2.0.md"/>
+    <toc-element topic="Build-Tutorial-v1.2.0.md"/>
     <toc-element topic="Software-Guide-V1.2.0.md"/>
 </instance-profile>

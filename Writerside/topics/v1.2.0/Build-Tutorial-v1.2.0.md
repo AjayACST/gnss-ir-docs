@@ -434,3 +434,8 @@ $GNRMC,000108.000,A,4443.0116,S,16910.7098,E,0.02,0.00,310524,,,D*6A
 </code-block>
 </chapter>
 </chapter>
+
+
+Now that you have the hardware built you can start collecting data! To find where the optimal place to put your antenna
+is use <a href="https://gnss-reflections.org/rzones">this site</a>. Enter your antenna's latitude, longitude, and height
+and it will show you where you can expect to recieve data from. You will want to ensure that the areas of collection are on flat land.
