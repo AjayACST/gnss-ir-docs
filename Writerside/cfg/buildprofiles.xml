@@ -21,5 +21,10 @@
             <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
+    <build-profile instance="v1.2.0">
+        <variables>
+            <noindex-content>false</noindex-content>
+        </variables>
+    </build-profile>
 
 </buildprofiles>
